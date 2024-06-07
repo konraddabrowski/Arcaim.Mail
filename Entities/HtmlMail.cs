@@ -5,6 +5,7 @@ namespace Arcaim.Mail.Entities;
 public class HtmlMail : AuditEntity<Guid>
 {
   public static HtmlMail Register(HtmlMailOptions options) => CreateBase(options, HtmlTemplateTypeMode.Enum.Registration);
+  public static HtmlMail ReportPasswordReset(HtmlMailOptions options) => CreateBase(options, HtmlTemplateTypeMode.Enum.ReportPasswordReset);
 
   private static HtmlMail CreateBase(HtmlMailOptions options, HtmlTemplateTypeMode.Enum htmlTemplate) => new ()
   {
